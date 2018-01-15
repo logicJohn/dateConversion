@@ -6,8 +6,6 @@ public class Source {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hello world");
 		String usDate = getDate ();
 		String euDate = usToEuDate (usDate);
 		System.out.println(euDate);
@@ -33,7 +31,7 @@ public class Source {
 			}
 			else if( usDate.charAt(end) == '/') {
 				day = usDate.substring(start, end);
-				year = usDate.substring(end+1, usDate.length()-1);
+				year = usDate.substring(end+1, usDate.length());
 				break;
 			}
 		}
