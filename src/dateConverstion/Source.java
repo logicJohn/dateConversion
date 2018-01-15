@@ -6,7 +6,7 @@ public class Source {
 	
 	
 	public static void main(String[] args) {
-		String usDate = getDate ();
+		String usDate = getDate (); //TEST
 		String euDate = usToEuDate (usDate);
 		System.out.println(euDate);
 		return;
