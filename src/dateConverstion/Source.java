@@ -6,8 +6,9 @@ public class Source {
 	
 	
 	public static void main(String[] args) {
-		String usDate = getDate (); //TEST
+		String usDate = getDate (); 
 		String euDate = usToEuDate (usDate);
+		System.out.println("Your date in European form is:");
 		System.out.println(euDate);
 		return;
 	}
@@ -15,6 +16,7 @@ public class Source {
 	public static String getDate () {
 		String temp = "";
 		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter a date in the form mon/day/year:");
 		temp = sc.nextLine();
 		sc.close();
 		return temp;
