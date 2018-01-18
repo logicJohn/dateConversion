@@ -1,5 +1,20 @@
 package dateConverstion;
 
+/** 
+ * @author Johnnie Hernandez
+ * @author CSCI2540
+ * @version Assignment 1
+ * 
+ * <h1>Grade Average Calculator</h1>
+ * This program takes a list of assignments from the user.
+ * Then calculates the users grade average and displays
+ * the assignments that are above the average.
+ * 
+ * 
+ * <b>Note:</b> When starting the program inserting a total
+ * number of grades less than 1 will result in the program ending
+*/
+
 import java.util.Scanner;
 
 public class gradeAvgCalc {
@@ -15,7 +30,12 @@ public class gradeAvgCalc {
 		sc.close();
 	}
 	
-	public static int getTotalGrades(Scanner sc) {
+	/**
+	 * Gets the total number of assignments from console.
+	 * @param sc Scanner for the program input.
+	 * @return An integer representing the total number of grades.
+	*/
+	private static int getTotalGrades(Scanner sc) {
 		int temp = 0;
 		System.out.print("Please enter the number of grades: ");
 		temp = sc.nextInt();
@@ -23,7 +43,13 @@ public class gradeAvgCalc {
 		return temp;
 	}
 	
-	public static void getGrades(int[] grades, Scanner sc) {
+	/**
+	 * Fills the array grades with each of the assignment 
+	 * through input sc.
+	 * @param grades An empty integer array.
+	 * @param sc Scanner the program input.
+	 */
+	private static void getGrades(int[] grades, Scanner sc) {
 		for (int i = 0; i < grades.length; i++) {
 			System.out.print("Enter a grade: ");
 			grades[i] = sc.nextInt();
@@ -31,7 +57,12 @@ public class gradeAvgCalc {
 		return;
 	}
 	
-	public static double averageGrade(int[] grades) {
+	/**
+	 * Find the average of the assignments in the array grades.
+	 * @param grades An integer array containing all assignments.
+	 * @return Average of grades.
+	 */
+	private static double averageGrade(int[] grades) {
 		double temp = 0.0;
 		for (int i = 0; i < grades.length; i++) {
 			temp += grades[i];
@@ -42,7 +73,12 @@ public class gradeAvgCalc {
 		return temp;
 	}
 	
-	public static void aboveAverageGrades(int[] grades, double average) {
+	/**
+	 * Finds all assignments that are above the average grade.
+	 * @param grades An integer array containing all assignments.
+	 * @param average A double expressing the average of grades.
+	 */
+	private static void aboveAverageGrades(int[] grades, double average) {
 		int count = 0;
 		for (int i = 0; i < grades.length; i++) {
 			if (grades[i] > average) {
