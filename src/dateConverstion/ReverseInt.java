@@ -17,7 +17,6 @@ import java.util.Scanner;
 public class ReverseInt {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int temp = getInt();
 		System.out.println("Your number printed in reverse order is:");
 		printReverseInt(temp);
