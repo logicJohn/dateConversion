@@ -23,7 +23,13 @@ public class gradeAvgCalc {
 		Scanner sc = new Scanner (System.in);
 		int[] grades;
 		double average;
-		grades = new int[getTotalGrades(sc)];
+		int numOfGrades = getTotalGrades(sc);
+		if (numOfGrades < 1 )
+		{
+			System.out.print("The number of assignments is 0 or less"
+					+ "exiting program.");
+		}
+		grades = new int[numOfGrades];
 		getGrades(grades, sc);
 		average = averageGrade(grades);
 		aboveAverageGrades(grades, average);
@@ -68,7 +74,7 @@ public class gradeAvgCalc {
 			temp += grades[i];
 		}
 		temp = temp / grades.length;
-		System.out.print("The average grade is: ");
+		System.out.print("\nThe average grade is: ");
 		System.out.println(temp);
 		return temp;
 	}
@@ -80,6 +86,7 @@ public class gradeAvgCalc {
 	 */
 	private static void aboveAverageGrades(int[] grades, double average) {
 		int count = 0;
+		System.out.println("\nThe grades above the average grade are:");
 		for (int i = 0; i < grades.length; i++) {
 			if (grades[i] > average) {
 				System.out.println(grades[i]);
